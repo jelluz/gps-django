@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from rest_framework import routers
-from users import views
+# from users import views
+import users.views
+import gps.views
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
+router.register(r'users', users.views.UserViewSet)
+router.register(r'groups', users.views.GroupViewSet)
+router.register(r'gps', gps.views.GpsViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
