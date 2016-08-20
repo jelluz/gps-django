@@ -1,0 +1,1 @@
+ curl -X -POST -H "Content-Type: application/json" -d '{"lat" :"200","lon":"200"}' -u jelle:modderfokker http://127.0.0.1:80 00/gps/
